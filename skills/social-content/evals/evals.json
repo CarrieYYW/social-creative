@@ -1,0 +1,47 @@
+{
+  "skill_name": "social-content",
+  "evals": [
+    {
+      "id": 2,
+      "prompt": "Write me a Twitter/X thread about the lessons I learned bootstrapping my SaaS to $10k MRR. Include hooks and a CTA at the end.",
+      "expected_output": "Help structure a Twitter/X thread around the supplied $10k MRR milestone. Preserve that fact without inventing a timeline, starting revenue, tactics, failures, customer stories, or results. Ask for the actual lessons if unavailable, or provide an explicitly labeled structure with missing facts identified. When source lessons are available, write a coherent thread with an opening suited to the story, a content-driven length, and the requested CTA.",
+      "assertions": [
+        "Uses the supplied $10k MRR milestone accurately",
+        "Does not invent timelines, experiences, tactics, or results",
+        "Requests missing lessons or labels an incomplete structure honestly",
+        "Provides a coherent opening and progression using available facts",
+        "Uses content-driven length rather than a mandatory tweet count",
+        "Includes or plans the requested CTA without fabricating an offer"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "i have a blog post that did really well. how do i turn it into social media content for multiple platforms?",
+      "expected_output": "Recognize a repurposing request and inspect or request the source blog post before claiming to extract its insights. Suggest destination-specific adaptations such as a LinkedIn insight post, Twitter/X thread, Instagram carousel, or reel when those platforms fit the user's audience and capacity. Preserve source meaning, give each piece standalone context, and distinguish a production brief from a finished visual or video. Choose the number of pieces from useful source material rather than a quota.",
+      "assertions": [
+        "Recognizes the casual repurposing request",
+        "Inspects or requests the blog source before claiming extraction",
+        "Preserves meaning and provides standalone context",
+        "Suggests specific adaptations for relevant destinations",
+        "Chooses scope from source value and capacity",
+        "Distinguishes content plans from produced visuals or video",
+        "Does not claim posts were scheduled or published"
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Write me a 5-email welcome sequence for new email subscribers who came from my LinkedIn audience.",
+      "expected_output": "Recognize that a five-email welcome sequence belongs to email/lifecycle copy rather than social-content. Use an appropriate email skill if available, or state the scope boundary and provide a useful handoff without pretending an unavailable skill exists. Preserve the LinkedIn audience context without forcing social post or carousel patterns onto the email sequence.",
+      "assertions": [
+        "Recognizes email sequence work and the scope boundary",
+        "Uses an appropriate specialist only when available",
+        "Does not pretend an unavailable email skill was invoked",
+        "Preserves useful social-to-email audience context",
+        "Does not force social post formats onto email work"
+      ],
+      "files": []
+    }
+  ]
+}

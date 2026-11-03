@@ -1,0 +1,14 @@
+{
+  "name": "social-creative",
+  "owner": {
+    "name": "Aya"
+  },
+  "description": "Social marketing research, content, static design, and video production.",
+  "plugins": [
+    {
+      "name": "social-creative",
+      "source": "./",
+      "description": "Research project-specific social marketing with social-marketer, write content with social-content, design static visuals with social-designer, and produce videos with video-editor."
+    }
+  ]
+}

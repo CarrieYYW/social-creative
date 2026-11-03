@@ -1,0 +1,22 @@
+{
+  "name": "social-creative",
+  "version": "1.3.1",
+  "description": "Research social marketing, write content, design static visuals, and produce videos using project-specific brand context.",
+  "author": {
+    "name": "Aya"
+  },
+  "repository": "https://github.com/CarrieYYW/social-creative",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Social Creative",
+    "shortDescription": "Research, plan, write, design, and edit social content.",
+    "longDescription": "Includes social-marketer for project research, channel strategy, campaigns, and strategic outcome review; social-content for posts, scripts, repurposing, and calendars; social-designer for static visuals; and video-editor for reels, explainers, talking-head edits, animation, and longer videos.",
+    "developerName": "Aya",
+    "category": "Creativity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": "Research or create social content, visuals, or videos using this project's brand context and goals."
+  }
+}

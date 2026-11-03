@@ -1,0 +1,21 @@
+{
+  "name": "social-creative",
+  "interface": {
+    "displayName": "Social Creative"
+  },
+  "plugins": [
+    {
+      "name": "social-creative",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "description": "Research project-specific social marketing with social-marketer, write content with social-content, design static visuals with social-designer, and produce videos with video-editor.",
+      "category": "Creativity",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      }
+    }
+  ]
+}

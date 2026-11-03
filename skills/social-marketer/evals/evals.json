@@ -1,0 +1,50 @@
+{
+  "skill_name": "social-marketer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Help me create a LinkedIn content strategy. I'm a SaaS founder building in public and want to grow my personal brand to drive awareness for my product. I currently have 500 followers and post maybe once a week.",
+      "expected_output": "Read existing brand and product-marketing context, investigate the relevant audience and available account evidence, and propose a practical LinkedIn strategy with sourced rationale and explicit unknowns. Treat once-a-week posting as context rather than a diagnosed problem. Choose feasible priorities and cadence from goals and capacity, then provide a usable production brief for posts/calendar work without making another skill a mandatory dependency or claiming unperformed research.",
+      "assertions": [
+        "Reads existing project context before requesting it again",
+        "Investigates relevant audience and source evidence rather than using generic platform rules",
+        "Separates findings, assumptions, and recommendations",
+        "Makes cadence conditional on capacity and account evidence",
+        "Provides priorities and a usable content-production handoff",
+        "Does not claim research was performed without source inspection",
+        "Does not publish, connect accounts, message, or spend without explicit execution instructions"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "My LinkedIn posts get like 200 impressions and almost no engagement. What am I doing wrong?",
+      "expected_output": "Treat 200 impressions and little engagement as limited observations, not enough to establish what is wrong. Request or inspect representative posts, goals, metric definitions, audience, a comparable account baseline, and elapsed time where useful. Offer plausible explanations as hypotheses and a focused next test with a meaningful changed element, relevant metric, and review window. Avoid promising that more posts, different timing, external-link removal, or daily engagement will fix reach without supporting evidence.",
+      "assertions": [
+        "Separates reported observations from possible explanations",
+        "Identifies the intended outcome and relevant missing evidence",
+        "Uses comparable account context rather than a universal impressions threshold",
+        "Does not assert a cause from low reach alone",
+        "Proposes a focused and measurable next test",
+        "Explains uncertainty and treats organic comparisons as directional",
+        "Does not prescribe a daily engagement routine or posting increase as a proven fix"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Help me reverse-engineer what's working for top creators in the DevTools space on Twitter. I want to understand their content patterns.",
+      "expected_output": "Define a research question and relevant DevTools audience, then inspect available examples from the user's account and relevant creators. Scale collection to the question; a fixed account or post count is optional. Separate observed topic, format, and treatment from hypotheses about success. Preserve provenance and access limits, account for visible-metric and outlier bias, then propose brand-appropriate patterns or format cards to evaluate with the user's own results.",
+      "assertions": [
+        "Defines audience relevance and the research question",
+        "Scales collection to available evidence and the decision",
+        "Does not require 10-20 accounts or hundreds of posts for every review",
+        "Separates observed structure from causal performance claims",
+        "Preserves sources, inspection coverage, and missing-data limits",
+        "Adapts patterns to the user's own voice and context",
+        "Proposes evaluation against relevant account goals and outcomes"
+      ],
+      "files": []
+    }
+  ]
+}

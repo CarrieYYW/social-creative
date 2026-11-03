@@ -1,0 +1,21 @@
+{
+  "name": "social-creative",
+  "description": "Research project-specific social marketing with social-marketer, write content with social-content, design static visuals with social-designer, and produce videos with video-editor.",
+  "version": "1.3.1",
+  "author": {
+    "name": "Aya"
+  },
+  "keywords": [
+    "social-media",
+    "marketing-research",
+    "social-strategy",
+    "copywriting",
+    "design",
+    "carousels",
+    "quotes",
+    "video-editing",
+    "reels"
+  ],
+  "repository": "https://github.com/CarrieYYW/social-creative",
+  "homepage": "https://github.com/CarrieYYW/social-creative"
+}

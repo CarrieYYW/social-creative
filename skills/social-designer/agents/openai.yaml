@@ -1,0 +1,4 @@
+interface:
+  display_name: "Social Designer"
+  short_description: "Design quote posts, carousels, covers, and social visuals"
+  default_prompt: "Use $social-designer to create or refine this social visual using the active brand brief."

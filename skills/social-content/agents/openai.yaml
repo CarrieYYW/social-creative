@@ -1,0 +1,4 @@
+interface:
+  display_name: "Social Content"
+  short_description: "Write social posts, scripts, and editorial calendars"
+  default_prompt: "Use $social-content to write social posts, scripts, or a calendar using this project's brand context and strategy."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Social Marketer"
+  short_description: "Research audiences and plan social marketing strategy"
+  default_prompt: "Use $social-marketer to research this project and recommend an evidence-based social media strategy."
