@@ -1,0 +1,4 @@
+interface:
+  display_name: "Start Here"
+  short_description: "Set up your brand and make a first post or video"
+  default_prompt: "Use $setup to guide me through Social Creative, reuse my project's context, and help me make my first post or video."

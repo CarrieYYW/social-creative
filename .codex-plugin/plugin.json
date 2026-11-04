@@ -1,7 +1,7 @@
 {
   "name": "social-creative",
-  "version": "1.3.1",
-  "description": "Research social marketing, write content, design static visuals, and produce videos using project-specific brand context.",
+  "version": "1.4.0",
+  "description": "Guided brand setup, social marketing research, content, static design, and reviewable AI video editing.",
   "author": {
     "name": "Aya"
   },
@@ -10,13 +10,18 @@
   "interface": {
     "displayName": "Social Creative",
     "shortDescription": "Research, plan, write, design, and edit social content.",
-    "longDescription": "Includes social-marketer for project research, channel strategy, campaigns, and strategic outcome review; social-content for posts, scripts, repurposing, and calendars; social-designer for static visuals; and video-editor for reels, explainers, talking-head edits, animation, and longer videos.",
+    "longDescription": "Start with guided setup or use four independent specialists: social-marketer for research and strategy; social-content for posts and scripts; social-designer for static visuals; video-editor for editable video production with cost controls and playable review drafts.",
     "developerName": "Aya",
     "category": "Creativity",
     "capabilities": [
       "Read",
       "Write"
     ],
-    "defaultPrompt": "Research or create social content, visuals, or videos using this project's brand context and goals."
+    "defaultPrompt": "Help me get started with Social Creative and make a post or video using this project\u2019s brand context."
+  },
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/setup/SKILL.md"
+    }
   }
 }

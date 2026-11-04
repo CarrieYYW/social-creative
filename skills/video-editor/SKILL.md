@@ -20,6 +20,8 @@ For reference teardowns, repeatable treatments, or substantial beat/shot plannin
 
 For a reusable project visual/sound treatment, read [references/project-treatment.md](references/project-treatment.md). For code-rendered motion graphics or compositing, read [references/code-based-video.md](references/code-based-video.md). Load these only when relevant; an existing editor preference or simple footage edit need not become a code project.
 
+For AI edits of existing footage, editing-route selection, cost control, or draft feedback, read [references/reviewable-editing.md](references/reviewable-editing.md). AI should carry out supported edits, preserve editable decisions, and produce a playable draft. Use existing tools and entitlements before substantial metered work; verify the actual export route. Do not stop at an edit plan when the requested editing can be performed.
+
 ## Establish source and context
 
 Use the active project's existing brand brief or project-local `brand-brief.md`, source media, copy, and approved examples. Share that same brief with social-designer when available. Keep audience, intended takeaway, voice, visual/editorial language, references, destination, and production constraints with the project; this skill is brand-agnostic.
@@ -39,7 +41,7 @@ Ask only for missing information that materially blocks the requested result. Us
 3. **Establish a representative moment.** Use actual source content to test the visual language and caption readability. For longer or complex films, build a storyboard or rough sequence before expensive finishing. Continue autonomously where the brief is clear; do not impose a separate approval gate on every edit.
 4. **Assemble for meaning.** Cut around complete thoughts and intentional beats. Choose footage, graphics, animation, and silence for their editorial role. Preserve breathing room where the idea needs it; fast cuts and constant motion are not universal defaults.
 5. **Finish deliberately.** Correct captions, refine timing, mix sound, align visual treatment, and inspect continuity. For animation, define what changes, why it moves, and how long the viewer needs to understand it.
-6. **Revise with control.** State what stays fixed and what changes in response to feedback. Preserve successful timing, content, and visual relationships unless the problem calls for a broader rethink.
+6. **Revise with control.** Tie feedback to the exact draft version and time/range. State what stays fixed and what changes. Preserve successful timing, content, and visual relationships unless the problem calls for a broader rethink. Reuse unchanged assets/analysis, remap notes after structural cuts, and inspect the affected sequence before verifying the full final assembly.
 
 For audio-to-video work, map transcript sections to narrative beats and visuals without adding unrelated B-roll. For long-form work, maintain the larger arc, chapter transitions, and recurring visual language while checking each local sequence. Scale the storyboard and edit recipe to the project.
 

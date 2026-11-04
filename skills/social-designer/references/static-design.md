@@ -8,6 +8,8 @@ Preserve exact wording when presented as a direct quotation. Do not silently sho
 
 Choose the visual treatment from meaning and brand context. Photography can establish a concrete situation; illustration can explain a relationship; texture can create atmosphere; a type-led design can give a strong sentence room. Avoid ornamental imagery that competes with the message. Check text against the actual background, including its busiest areas.
 
+Deliver quote mockups with editable text, attribution, typography, spacing, colors, and relevant imagery controls, plus a matching rendered preview. Follow [editable mockups](editable-mockups.md) for format selection, user controls, save/reopen verification, and export fidelity.
+
 ## Carousels
 
 Define a complete reading arc: an opening that makes the topic clear, development that advances the idea, and an ending that resolves it. Use an invitation or CTA when it serves the brief. Choose the slide count from the amount and complexity of content; there is no universal best count.

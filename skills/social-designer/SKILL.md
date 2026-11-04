@@ -5,7 +5,7 @@ description: Design, create, edit, or review static social media visuals, includ
 
 # Social Designer
 
-Create readable, distinctive social visuals that serve the message and fit the active brand. Own the work from concept through an inspected export and editable source when the environment supports it. Static quote posts and carousels are first-class deliverables.
+Create readable, distinctive social visuals that serve the message and fit the active brand. Own the work from concept through an inspected export and editable source. Quote-post and carousel mockups should be adjustable by the user, with a matching preview; state concrete tooling gaps when a required source format cannot be produced. Static quote posts and carousels are first-class deliverables.
 
 ## Start with the deliverable
 
@@ -14,6 +14,8 @@ Identify whether the user wants a concept, a finished asset, an edit, a format a
 Read [references/static-design.md](references/static-design.md) for quote design, carousel structure, and format adaptation. For a new brand or mixed-brand work, also read [references/brand-context.md](references/brand-context.md).
 
 When learning from supplied examples or building reusable formats, read [references/reference-analysis.md](references/reference-analysis.md). Record source and inspection coverage, extract the transferable design relationship, and state what fits the active brand. A routine edit does not need a separate teardown.
+
+For quote-post/carousel mockups or an editable handoff, read [references/editable-mockups.md](references/editable-mockups.md). Prefer the user’s supported editor; otherwise choose a portable format with practical fine-tuning controls. Keep quote and attribution as live text, preserve separate design elements, and verify saved changes reopen correctly.
 
 ## Ground in this brand and message
 

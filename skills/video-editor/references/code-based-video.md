@@ -41,4 +41,6 @@ npx --no-install remotion render src/index.ts Main out/review.mp4
 
 Choose review frames around difficult cuts, caption changes, overlaps, animation extremes, and the ending; a representative frame alone cannot verify the timeline. Run the project's type/build checks when applicable, render a rough sequence before expensive finishing, then inspect actual output with the main skill's playback, sound, and delivery checks. Type checking and stills do not prove correct timing, audio, or a complete export.
 
+For expensive renders, use available low-resolution/partial previews and cache reusable components; verify the engine’s actual options. A caption or logo change need not regenerate footage or reanalyze unchanged speech. See [reviewable editing](reviewable-editing.md) for cost accounting and version-bound notes.
+
 Keep successful components and timing stable during revisions. If a voice change affects alignment, propagate it through captions, scenes, sound, and duration; if only color changes, avoid rewriting the narrative. Deliver a rendered file plus editable code/assets and the tested render recipe where supported. If rendering fails or playback is unavailable, report the concrete stage and coverage gap without calling a plan, still, or silent intermediate a verified finished video.

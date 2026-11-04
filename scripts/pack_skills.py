@@ -17,7 +17,10 @@ def pack(root):
         contents = {
             f"{skill.name}/{path.relative_to(skill).as_posix()}": path.read_bytes()
             for path in skill.rglob("*")
-            if path.is_file() and path.name != ".DS_Store"
+            if path.is_file()
+            and path.name != ".DS_Store"
+            and "__pycache__" not in path.relative_to(skill).parts
+            and path.suffix not in {".pyc", ".pyo"}
         }
         archive = output / f"{skill.name}.zip"
         with zipfile.ZipFile(archive, "w", zipfile.ZIP_DEFLATED) as bundle:

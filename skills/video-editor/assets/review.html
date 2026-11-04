@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Video review · Social Creative</title>
+<style>
+/* This packet's scoped UI tokens; no client brand or external dependencies. */
+:root { color-scheme: light; --ink:#18251f; --muted:#46584d; --paper:#f5f6f3; --surface:#fff; --line:#c6cec8; --accent:#245f44; --focus:#154ca6; --space:.75rem; --radius:.5rem; }
+* { box-sizing:border-box; }
+[hidden] { display:none !important; }
+body { margin:0; padding:clamp(1rem,3vw,2.5rem); background:var(--paper); color:var(--ink); font:1rem/1.5 system-ui,sans-serif; }
+main { max-width:76rem; margin:auto; }
+h1 { font-size:clamp(1.6rem,3vw,2.1rem); margin:0 0 .25rem; line-height:1.2; }
+h2 { font-size:1.15rem; margin:0; }
+p { margin:.5rem 0 1rem; }
+.muted, small { color:var(--muted); }
+.layout { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(20rem,1fr); gap:1.5rem; align-items:start; }
+.panel { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:1rem; min-width:0; }
+video { display:block; width:100%; max-height:65vh; background:#101512; border-radius:var(--radius); }
+label { display:block; margin:.75rem 0 .25rem; font-weight:600; }
+input, textarea, button { font:inherit; }
+input[type=number], textarea { width:100%; padding:.6rem; border:1px solid var(--line); border-radius:var(--radius); color:var(--ink); background:var(--surface); }
+textarea { min-height:7rem; resize:vertical; }
+button, .import { display:inline-block; border:1px solid var(--line); border-radius:var(--radius); padding:.6rem .8rem; background:var(--surface); color:var(--ink); cursor:pointer; min-height:2.75rem; font-weight:600; }
+button.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+button:disabled { opacity:.5; cursor:default; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, video:focus-visible { outline:3px solid var(--focus); outline-offset:3px; }
+.row { display:flex; flex-wrap:wrap; align-items:center; gap:var(--space); margin-top:var(--space); }
+.times { display:grid; grid-template-columns:1fr 1fr; gap:var(--space); }
+#notes { padding-left:1.4rem; }
+#notes li { padding:.75rem 0; border-top:1px solid var(--line); overflow-wrap:anywhere; }
+.note-text { white-space:pre-wrap; margin:.5rem 0; }
+#status { min-height:1.5rem; }
+#identity { overflow-wrap:anywhere; }
+input[type=file] { max-width:100%; }
+@media (max-width:780px) { .layout { grid-template-columns:1fr; } }
+</style>
+<main>
+  <h1>Video review</h1>
+  <p id="identity" class="muted"></p>
+  <div class="layout">
+    <section class="panel" aria-label="Review video">
+      <video id="video" controls preload="metadata" src="review.mp4"></video>
+      <p><strong id="clock">00:00:00.000</strong> <span class="muted">elapsed in this draft</span></p>
+      <p class="muted">Pause at a moment to leave a note, or mark a range. Keep what works clear in your feedback.</p>
+      <p id="playback" role="status"></p>
+    </section>
+    <section class="panel" aria-labelledby="feedback-heading">
+      <h2 id="feedback-heading">Feedback</h2>
+      <form id="note-form">
+        <div class="times">
+          <div><label for="start">Start (seconds)</label><input id="start" type="number" min="0" step="0.001" value="0" required><button type="button" id="mark-start">Use current time</button></div>
+          <div><label for="end">End (optional)</label><input id="end" type="number" min="0" step="0.001"><button type="button" id="mark-end">Use current time</button></div>
+        </div>
+        <label for="note">What should change?</label>
+        <textarea id="note" required maxlength="10000" placeholder="For example: keep the pause, but hold the caption longer."></textarea>
+        <div class="row"><button class="primary" id="save" type="submit">Add note</button><button id="cancel" type="button" hidden>Cancel edit</button></div>
+      </form>
+      <p id="status" role="status" aria-live="polite"></p>
+      <h2 id="count">Notes (0)</h2>
+      <p id="empty" class="muted">Your notes will appear here. Choose a timestamp to revisit a moment.</p>
+      <ol id="notes"></ol>
+      <div class="row"><button id="download" type="button" disabled>Download feedback</button></div>
+      <label for="import">Resume saved feedback</label>
+      <input id="import" type="file" accept="application/json,.json">
+      <p class="muted"><small>Notes stay in this tab until downloaded. Import accepts feedback from this exact draft and replaces the notes shown here. This page does not upload media or feedback.</small></p>
+    </section>
+  </div>
+</main>
+<script>
+"use strict";
+const context = __REVIEW_CONTEXT__;
+const $ = id => document.getElementById(id);
+const video = $("video");
+let notes = [], editing = null, dirty = false;
+const status = text => { $("status").textContent = text; };
+const stamp = seconds => {
+  const ms = Math.round(seconds * 1000);
+  return [Math.floor(ms/3600000), Math.floor(ms/60000)%60, Math.floor(ms/1000)%60].map(v=>String(v).padStart(2,"0")).join(":") + "." + String(ms%1000).padStart(3,"0");
+};
+$("identity").textContent = context.version + " · " + context.media_name;
+video.addEventListener("timeupdate", () => { $("clock").textContent = stamp(video.currentTime); });
+video.addEventListener("error", () => { $("playback").textContent = "Playback failed. Keep review.mp4 beside this page and use a browser-supported codec. A local web server may help if file playback is restricted."; });
+$("mark-start").onclick = () => { video.pause(); $("start").value = video.currentTime.toFixed(3); };
+$("mark-end").onclick = () => { video.pause(); $("end").value = video.currentTime.toFixed(3); };
+function resetForm() {
+  editing = null; $("note").value = ""; $("end").value = "";
+  $("save").textContent = "Add note"; $("cancel").hidden = true;
+}
+function render() {
+  $("notes").replaceChildren(); $("empty").hidden = notes.length > 0;
+  $("count").textContent = "Notes (" + notes.length + ")";
+  $("download").disabled = notes.length === 0 && !dirty;
+  for (const n of notes) {
+    const li = document.createElement("li"), seek = document.createElement("button");
+    seek.type = "button"; seek.textContent = stamp(n.start_seconds) + (n.end_seconds === null ? "" : " – " + stamp(n.end_seconds));
+    seek.setAttribute("aria-label", "Seek to " + stamp(n.start_seconds));
+    seek.onclick = () => {
+      video.pause();
+      const available = Array.from({length:video.seekable.length}, (_,i)=>[video.seekable.start(i),video.seekable.end(i)]).some(([start,end])=>end > start && n.start_seconds >= start && n.start_seconds <= end);
+      if (!available) { $("playback").textContent = "Seeking is unavailable in this browser or server. Use local playback or a server that supports media byte ranges."; return; }
+      $("playback").textContent = ""; video.currentTime = n.start_seconds;
+    };
+    const p = document.createElement("p"); p.className = "note-text"; p.textContent = n.text;
+    const actions = document.createElement("div"); actions.className = "row";
+    const edit = document.createElement("button"); edit.type = "button"; edit.textContent = "Edit note";
+    edit.onclick = () => {
+      editing = n.id; $("start").value = n.start_seconds; $("end").value = n.end_seconds === null ? "" : n.end_seconds;
+      $("note").value = n.text; $("save").textContent = "Save changes"; $("cancel").hidden = false; $("note").focus();
+    };
+    const remove = document.createElement("button"); remove.type = "button"; remove.textContent = "Delete note";
+    remove.onclick = () => { notes = notes.filter(item=>item.id !== n.id); if(editing === n.id) resetForm(); dirty = true; render(); status("Note deleted. Download feedback to retain changes."); };
+    actions.append(edit, remove); li.append(seek, p, actions); $("notes").append(li);
+  }
+}
+function validRange(start, end) {
+  return Number.isFinite(start) && start >= 0 && (end === null || (Number.isFinite(end) && end >= start)) &&
+    Number.isFinite(video.duration) && start <= video.duration && (end === null || end <= video.duration);
+}
+$("note-form").onsubmit = event => {
+  event.preventDefault(); video.pause();
+  const start = Number($("start").value), end = $("end").value === "" ? null : Number($("end").value), text = $("note").value.trim();
+  if (!text || !validRange(start,end)) { status("Enter a note and a valid range within this video. End must be at or after start."); return; }
+  const item = {id: editing || ("note-" + Date.now() + "-" + Math.random().toString(36).slice(2,8)), start_seconds:start, end_seconds:end, text};
+  if (editing) notes = notes.map(n=>n.id === editing ? item : n); else notes.push(item);
+  dirty = true; resetForm(); render(); status("Note saved in this tab. Download feedback before closing.");
+};
+$("cancel").onclick = resetForm;
+$("download").onclick = () => {
+  const data = JSON.stringify({...context, notes}, null, 2);
+  const link = document.createElement("a"), url = URL.createObjectURL(new Blob([data],{type:"application/json"}));
+  link.href = url; link.download = "feedback-" + context.version.replace(/[^a-z0-9_-]/gi,"_").slice(0,60) + ".json";
+  document.body.append(link); link.click(); link.remove(); setTimeout(()=>URL.revokeObjectURL(url),10000);
+  dirty = false; status("Feedback download requested. Confirm the file was saved before closing.");
+};
+$("import").onchange = async event => {
+  const file = event.target.files[0]; if (!file) return;
+  try {
+    if(file.size > 2*1024*1024) throw new Error("Feedback file is too large (maximum 2 MB).");
+    const data = JSON.parse(await file.text());
+    if (!data || data.schema !== context.schema || data.version !== context.version || data.media_sha256 !== context.media_sha256 || data.time_basis !== context.time_basis) throw new Error("Feedback belongs to a different draft or format.");
+    if (!Array.isArray(data.notes) || data.notes.length > 1000) throw new Error("Invalid notes list.");
+    const ids = new Set();
+    const imported = data.notes.map(n => {
+      if (!n || typeof n.id !== "string" || !n.id || ids.has(n.id) || typeof n.text !== "string" || !n.text.trim() || n.text.length > 10000 || !validRange(n.start_seconds,n.end_seconds)) throw new Error("Invalid note or time range.");
+      ids.add(n.id); return {id:n.id, start_seconds:n.start_seconds, end_seconds:n.end_seconds, text:n.text};
+    });
+    if ((dirty || $("note").value.trim()) && !confirm("Replace the notes in this tab? Download first if you need to keep them.")) return;
+    notes = imported; dirty = false; resetForm(); render(); status("Saved feedback loaded for this draft.");
+  } catch(error) { status(error.message); }
+  finally { event.target.value = ""; }
+};
+window.addEventListener("beforeunload", event => { if (dirty || $("note").value.trim()) { event.preventDefault(); event.returnValue = ""; } });
+render();
+</script>
+</html>

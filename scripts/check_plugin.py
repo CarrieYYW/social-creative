@@ -41,6 +41,14 @@ def check(root):
         assert "[TODO:" not in instructions, skill
         metadata = (skill / "agents/openai.yaml").read_text()
         assert f"${skill.name}" in metadata, skill
+    # Inline OpenAI settings replace the compatibility overlay, rather than merge.
+    inline = manifests[0].get("extensions", {}).get("com.openai")
+    settings = inline if isinstance(inline, dict) else manifests[2].get("extensions", {}).get("com.openai", {})
+    onboarding = settings.get("onboardingSkill")
+    assert isinstance(onboarding, str) and onboarding.startswith("./"), "Missing onboarding skill"
+    target = (root / onboarding).resolve()
+    assert target.is_relative_to(root.resolve()), "Onboarding path escapes plugin"
+    assert target in [(skill / "SKILL.md").resolve() for skill in skills], "Onboarding target is not a packaged skill"
     links = 0
     for path in [root / "README.md", root / "AGENTS.md", *(root / "skills").rglob("*.md")]:
         for target in re.findall(r"\]\(([^)]+)\)", path.read_text()):
