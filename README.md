@@ -14,7 +14,11 @@ The specialists reuse the active project's existing brand guide or project-local
 
 Social-marketer researches a new project's foundation and refreshes it for meaningful decisions. Social-content translates the direction into copy and a practical editorial plan; the production skills own their finished deliverables. Simple requests proceed directly from a clear brief without a four-role pipeline. Product UI design is outside this plugin's scope.
 
-## Version 1.4.0
+## Version 1.5.0
+
+Adds a [direct visual video editing workflow](skills/video-editor/references/visual-editing.md): use an existing editor or a focused composition panel so users can fine-tune captions, layout, media, timing, motion, and audio as supported by the project. Saved adjustments must drive both preview and export, with undo/recovery, scene/global scope, and persistence checks. The included playback/feedback helper remains review-only. This release adds maintained production instructions, not a bundled editing engine or a tested universal video editor.
+
+### Included from 1.4.0
 
 Adds guided setup, a Codex setup entry point, and practical AI editing guidance for existing footage, native editors, code-based graphics, and speech-first tools. Video work now includes cost/retry controls, reversible sources, cached inputs, playable drafts, and version-bound feedback. A small local review helper packages an existing MP4 with downloadable timestamped notes; it does not edit or render video. [Dated research](skills/video-editor/references/ai-editing-research-2026-11-03.md) retains official documentation, three YouTube transcript analyses, counterexamples, and unresolved tool limits. These are implemented methods, not a measured quality or cost benchmark.
 
@@ -30,6 +34,7 @@ Inspect actual evidence, extract a transferable pattern, adapt it to the project
 - [Editable quote and carousel mockups](skills/social-designer/references/editable-mockups.md)
 - [Static reference analysis and variants](skills/social-designer/references/reference-analysis.md)
 - [Video teardowns, beat plans, and shot coverage](skills/video-editor/references/reference-analysis.md)
+- [Direct visual video editing](skills/video-editor/references/visual-editing.md)
 - [Affordable, reviewable AI editing](skills/video-editor/references/reviewable-editing.md)
 - [Code-based video production](skills/video-editor/references/code-based-video.md)
 - [Project visual and sound treatment](skills/video-editor/references/project-treatment.md)

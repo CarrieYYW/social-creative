@@ -24,6 +24,8 @@ Treat silence/filler detection and automatic clip ranking as proposals. Preserve
 
 Keep speech, music, captions, and graphics separately editable where practical. Cache selected generated shots and reusable graphic components. A caption or logo fix should not trigger fresh transcription, new generated footage, and a rewritten narrative. Imported timelines need an actual import/playback check: fonts, animations, sequences, effects, and audio may not transfer intact. Keep a reference movie alongside the handoff.
 
+For direct user adjustments, follow [visual editing](visual-editing.md). Use a supported editor or a control panel connected to the actual composition and render settings; the feedback helper below remains a review-only tool.
+
 ## Review a version, then revise it
 
 Produce a playable draft with sound at an economical resolution before expensive finishing when the task warrants it. Label its version and preserve its editable source. A contact sheet helps locate scenes but cannot replace temporal or audio review. A single-file correction may proceed straight to the complete export.

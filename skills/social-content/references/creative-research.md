@@ -1,6 +1,6 @@
 # Social Creative Research and Learnings
 
-Last updated: 2026-11-03
+Last updated: 2026-11-04
 
 This is the shared research notebook for social-marketer, social-content, social-designer, and video-editor. It preserves source findings, useful context, experiments, limitations, and rejected approaches that do not warrant separate skills. Read it when evaluating references or planning improvements; it is not a mandatory checklist for every post.
 
@@ -183,6 +183,14 @@ Earlier references are also retained for later reinspection/backfill; this noteb
 The detailed evidence now lives in video-editor's standalone research reference, `references/ai-editing-research-2026-11-03.md`, covering official tool documentation and three YouTube transcript analyses. Synthesis: preserve editable decisions about existing footage, separate spoken cuts from graphics when useful, review a versioned playable draft, cache unchanged inputs, and count total revision costs rather than only model tokens. Creator trials demonstrate mixed workflows and intervention; they do not establish universal failure rates or an all-in cost benchmark. Source-level export inconsistencies remain explicitly unresolved.
 
 The 1.4.0 source update adds this method to video-editor, with a local MP4 feedback helper and guided setup for a first usable asset. This is a local implementation record, not proof of publication, installation, creative quality, or measured savings. Keep project-specific editing trials, budgets, and feedback with the active project.
+
+## Reference follow-up: visual controls for a video edit — 2026-11-04
+
+Source: [Instagram reel DeulxG-t1li](https://www.instagram.com/reel/DeulxG-t1li/) by @viiolini. New reference, absent from the retained notes before this review. Inspection: caption and sampled frames from an approximately 8.9-second muted reel; no full audiovisual or underlying-project review.
+
+Observed: a browser video preview alongside style controls and image thumbnails. Claude authorship and five-minute turnaround are creator claims, not verified production results.
+
+Useful adaptation: expose repeatable video styling as understandable controls when the project warrants it. Existing quote-mockup guidance already covers visual fine-tuning; the shipped video helper only collects feedback. The 1.5.0 source update integrates the direct-editing method into video-editor’s `references/visual-editing.md`: prefer native controls or connect a focused composition panel to saved settings and rendering. This is implemented workflow guidance, not a bundled editor or an already-validated project interface. An existing editor may supply those controls without building a new app. A pilot must verify saved settings reproduce the preview and final render.
 
 ## Updating this notebook
 

@@ -30,6 +30,10 @@ Drive scene state and motion from the renderer's frame/time model so seeking and
 
 For Remotion specifically, inspect the installed version and the official [frame API](https://www.remotion.dev/docs/use-current-frame), [caption workflow](https://www.remotion.dev/docs/captions/), [render command](https://www.remotion.dev/docs/cli/render), and [still command](https://www.remotion.dev/docs/cli/still). Frames are zero-indexed and local scene frames can differ from composition frames. Make timing units and sequence offsets explicit rather than hiding them in scattered constants.
 
+## User-facing fine-tuning
+
+When users should adjust the video directly, follow [visual editing](visual-editing.md). Expose appropriate composition and mix parameters through a working control panel using the same validated, saved state as the renderer. Preserve scene overrides and replacement assets on reopen; a CSS overlay or browser monitor-volume change alone does not change the exported film. Prefer existing controls over adding a separate application.
+
 ## Render, inspect, and revise
 
 Use existing project scripts when present. These example commands illustrate an installed Remotion project; replace the entry point, composition ID, frame, and paths with actual project values and verify the local CLI before running. They do not install dependencies or constitute a render performed by this skill file.

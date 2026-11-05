@@ -1,6 +1,6 @@
 {
   "name": "social-creative",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Guided brand setup, social marketing research, content, static design, and reviewable AI video editing.",
   "author": {
     "name": "Aya"
@@ -10,7 +10,7 @@
   "interface": {
     "displayName": "Social Creative",
     "shortDescription": "Research, plan, write, design, and edit social content.",
-    "longDescription": "Start with guided setup or use four independent specialists: social-marketer for research and strategy; social-content for posts and scripts; social-designer for static visuals; video-editor for editable video production with cost controls and playable review drafts.",
+    "longDescription": "Start with guided setup or use four independent specialists: social-marketer for research and strategy; social-content for posts and scripts; social-designer for static visuals; video-editor for editable video production with cost controls, playable review drafts, and direct visual fine-tuning workflows.",
     "developerName": "Aya",
     "category": "Creativity",
     "capabilities": [

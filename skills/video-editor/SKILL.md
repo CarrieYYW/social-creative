@@ -1,6 +1,6 @@
 ---
 name: video-editor
-description: Create, edit, or review videos, including reels, animated quotes, visual explainers, talking-head edits with B-roll, and audio-to-video or long-form projects. Own visual direction, story structure, pacing, captions, sound, animation, and verified exports. Also use for video production pipelines and timecoded edit feedback. Static posts and carousels belong to social-designer when available.
+description: Create, edit, or review videos, including reels, animated quotes, visual explainers, talking-head edits with B-roll, and audio-to-video or long-form projects. Own visual direction, story structure, pacing, captions, sound, animation, and verified exports. Also use for video production pipelines, direct visual fine-tuning, and timecoded edit feedback. Static posts and carousels belong to social-designer when available.
 ---
 
 # Video Editor
@@ -21,6 +21,8 @@ For reference teardowns, repeatable treatments, or substantial beat/shot plannin
 For a reusable project visual/sound treatment, read [references/project-treatment.md](references/project-treatment.md). For code-rendered motion graphics or compositing, read [references/code-based-video.md](references/code-based-video.md). Load these only when relevant; an existing editor preference or simple footage edit need not become a code project.
 
 For AI edits of existing footage, editing-route selection, cost control, or draft feedback, read [references/reviewable-editing.md](references/reviewable-editing.md). AI should carry out supported edits, preserve editable decisions, and produce a playable draft. Use existing tools and entitlements before substantial metered work; verify the actual export route. Do not stop at an edit plan when the requested editing can be performed.
+
+For videos users can fine-tune directly, read [references/visual-editing.md](references/visual-editing.md). Deliver a supported visual editing surface with the project: prefer existing native editor controls, or a focused panel connected to a code-rendered composition. Save user adjustments and use that same state for preview and export. A playback/feedback page is not an editing interface.
 
 ## Establish source and context
 
@@ -57,7 +59,7 @@ Report precisely what was checked and any remaining gaps. If full playback or a 
 
 ## Deliver and learn
 
-Provide the rendered video when requested, an editable project or reproducible source supported by the chosen tools, and captions/cover assets as appropriate. A flattened MP4 is not an editable timeline. Preserve source references, clip in/out points, overlays, audio decisions, and export settings in the project or a concise edit recipe. Never claim a native editing project was created if only a script or render exists.
+Provide the rendered video when requested, an editable project or reproducible source supported by the chosen tools, and captions/cover assets as appropriate. For direct fine-tuning, include the working editing surface, saved settings, and instructions to reopen and render the selected revision; state concrete gaps rather than labeling code or a flat MP4 a visual editor. A flattened MP4 is not an editable timeline. Preserve source references, clip in/out points, overlays, audio decisions, and export settings in the project or a concise edit recipe. Never claim a native editing project was created if only a script or render exists.
 
 Record useful feedback in the active brand/project context with the artifact, reason, applicable format, and constraints. Distinguish preferences from observed results and performance hypotheses. Reuse successful workflows without transferring another brand's style silently.
 
