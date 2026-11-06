@@ -1,6 +1,6 @@
 # Code-Based Video Production
 
-Use when code is an appropriate editable source for motion graphics, animated quotes, diagrams, explainers, or footage compositing. Respect an existing editor/project preference and inspect available tools before selecting an engine. A code-rendering route is optional; do not build an application or install a stack merely because the user asked for an edit.
+Use when code is an appropriate editable source for motion graphics, animated quotes, diagrams, explainers, or footage compositing. Respect an existing editor/project preference and inspect available tools before selecting an engine. A code-rendering route is optional; do not build an application or install a stack merely because the user asked for an edit. [Studio](studio-system.md) needs no installation and suits most short-form template work. Use an engine such as Remotion when a project already has it or needs something Studio does not do; check its licence for company use.
 
 ## Establish the production contract
 

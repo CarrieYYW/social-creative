@@ -192,6 +192,10 @@ Observed: a browser video preview alongside style controls and image thumbnails.
 
 Useful adaptation: expose repeatable video styling as understandable controls when the project warrants it. Existing quote-mockup guidance already covers visual fine-tuning; the shipped video helper only collects feedback. The 1.5.0 source update integrates the direct-editing method into video-editor’s `references/visual-editing.md`: prefer native controls or connect a focused composition panel to saved settings and rendering. This is implemented workflow guidance, not a bundled editor or an already-validated project interface. An existing editor may supply those controls without building a new app. A pilot must verify saved settings reproduce the preview and final render.
 
+## Reference follow-up: We Love You storytelling — 2026-11-05
+
+The [owning source study](we-love-you-storytelling-study-2026-11-05.md) retains four selected primary Instagram examples, public counts from a twelve-item visible grid, sampled muted frames/captions, specific coverage gaps and candidate planning cards. Transferable candidates: give an abstract tension a physical situation; use a relationship to develop a perspective; move from a question to a concrete example and revisit it; give each shot scale a communication role. Friend-directed captions suggest an interpersonal use to explore, not a proven sharing mechanism. No complete audiovisual teardown, causal virality finding, accepted adaptation or audience result is claimed. Project-specific taste and original briefs remain with the active project.
+
 ## Updating this notebook
 
 For each new reference batch, add the date, direct sources, inspection coverage, specific findings, proposed application, limits, and placement decision. Consolidate repeated ideas into an existing entry while retaining provenance. Update a claim explicitly if later evidence contradicts it. Keep unreviewed links pending and record rejected approaches with a reason.

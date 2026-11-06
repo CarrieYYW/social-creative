@@ -49,6 +49,12 @@ def check(root):
     target = (root / onboarding).resolve()
     assert target.is_relative_to(root.resolve()), "Onboarding path escapes plugin"
     assert target in [(skill / "SKILL.md").resolve() for skill in skills], "Onboarding target is not a packaged skill"
+    studio = root / "skills/video-editor/assets/studio"
+    copy = root / "skills/social-designer/assets/studio"
+    files = lambda base: {p.relative_to(base): p.read_bytes() for p in base.rglob("*") if p.is_file() and p.name != ".DS_Store"}
+    assert files(studio) == files(copy), "Studio copies differ; run scripts/sync_studio.py"
+    brief = root / "skills/social-content/assets/brief-template.md"
+    assert brief.read_bytes() == (studio / "brief-template.md").read_bytes(), "Brief copies differ; run scripts/sync_studio.py"
     links = 0
     for path in [root / "README.md", root / "AGENTS.md", *(root / "skills").rglob("*.md")]:
         for target in re.findall(r"\]\(([^)]+)\)", path.read_text()):

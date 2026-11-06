@@ -26,3 +26,13 @@ Validate the card with real copy and a representative post or cover/content pair
 For visual exploration, hold copy constant when comparing composition or typography. For a performance test, state the hypothesis, changed element, fixed elements, intended metric, and measurement limitations in the handoff. A cover-only test keeps the inner carousel stable; changing the entire treatment tests the package, not one visual property.
 
 Inspect every actual variant for readability, consistency, and correct exports using [Static Social Design](static-design.md). Do not declare an engagement winner from aesthetic preference. When results arrive, retain the artifact, outcome, context, and next decision with the project. Detailed analytics can use social-content when available; this skill remains able to produce and review static assets independently.
+
+## Taste studies and working templates
+
+For reference-led taste calibration, produce a comparable post with the project's own copy, then inspect it beside the reference at the same viewing size. Explain the actual relationships: type scale/weight, line breaks, text measure, margins, alignment, image crop/treatment and contrast. Preserve the reading sequence across a carousel. State which parts were observed, approximated or deliberately adapted.
+
+Retain the user's explicit feedback with that artifact/version, including rejection without inventing its reason. Technical export checks do not establish visual acceptance. Keep taste scoped to the person/project; only promote general techniques supported by checked examples.
+
+Once a pattern works in context, retain a working editable template, rendered example, default content/assets, editable inputs, reproduction/export steps and known limits. Record which relationships should remain stable and what may vary. Test another realistic quote length or image before describing it as reusable. A Markdown format card alone is not that editable design template. Use a matching video treatment only where its visual structure supports the static reading experience.
+
+An experimental [cross-grid SVG template](../assets/cross-grid-quote.svg) provides actual editable text, vector artwork and a 3×3 clip structure at 1080×1350. Replace its sample copy/artwork, retain relationships only where useful, and check fit/contrast after edits. Its default style is a demonstration, not an approved brand treatment.

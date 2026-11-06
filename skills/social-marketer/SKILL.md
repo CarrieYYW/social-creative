@@ -9,6 +9,8 @@ Make social marketing decisions from the active project's goals and evidence. Re
 
 ## Scope and context
 
+Consult the [learning index](references/learning-index.md) for relevant retained methods and source studies before related work; load matching records and the active project’s explicit feedback, preserving inspection, implementation and acceptance status.
+
 Own audience and competitor research, channel rationale, positioning for social, campaign objectives, content opportunities, strategic experiments, and outcome review. Use an existing business/marketing strategy rather than replacing it silently. Social-content turns the direction into post copy, scripts, repurposing, and editorial calendars; social-designer and video-editor own final media. None is a prerequisite for a simple request.
 
 Read the project's brand guide, product-marketing context, research, social strategy, available analytics, and explicit feedback before asking questions. Prefer existing documents; typical context paths include `.agents/product-marketing-context.md` and its older `.claude/` equivalent. Ask only for consequential gaps that cannot be resolved from accessible sources. Education, trust, community, and sales can be different goals; do not assume every project needs a lead funnel.

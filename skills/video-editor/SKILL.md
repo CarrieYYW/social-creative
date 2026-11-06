@@ -14,9 +14,17 @@ Turn the intended message and source material into a coherent viewing experience
 - **Creative direction:** propose a treatment, reference frames, or storyboard when that is the requested deliverable. Distinguish a concept from a rendered film.
 - **Pipeline design:** define source ingestion, beat selection, sourcing/generation, assembly, captions, sound, export, and review as needed. Explain the editable source and repeatable controls; do not build an application when the user asked for an edit.
 
+Story comes first. For any new video, read [references/story-and-hooks.md](references/story-and-hooks.md) and settle the audience, promise, payoff and share reason before choosing a treatment. Never promise virality.
+
+For any new video, follow [references/production-workflow.md](references/production-workflow.md): story brief, script, storyboard, low-res draft, final, learn, with a sign-off that asks only what each stage can show. It also sizes the job, so small edits skip the stages.
+
+Studio is the default editable route when no native editor is preferred: templates for quote, explainer, talking-head and event-promo videos, where one `project.json` drives the live preview, stills and video. Read [references/studio-system.md](references/studio-system.md). For type, timing, curves and transition choices, read [references/motion-craft.md](references/motion-craft.md).
+
 For reels, animated quotes, explainers, and talking-head edits, read [references/short-form.md](references/short-form.md). For platform-ready delivery, read [references/platform-specs.md](references/platform-specs.md). Load [references/audio-design.md](references/audio-design.md) when working on sound and [references/ai-video-tools.md](references/ai-video-tools.md) when generating footage.
 
 For reference teardowns, repeatable treatments, or substantial beat/shot planning, read [references/reference-analysis.md](references/reference-analysis.md). State inspection coverage, connect timecoded observations to editorial purpose, and adapt the pattern to this brand. Simple edits do not require a separate analysis or shot list.
+
+For motion-graphics studies and templates, read [references/motion-graphics.md](references/motion-graphics.md). Reference-led taste calibration belongs to the reference-analysis workflow; retain user feedback against actual rendered versions.
 
 For a reusable project visual/sound treatment, read [references/project-treatment.md](references/project-treatment.md). For code-rendered motion graphics or compositing, read [references/code-based-video.md](references/code-based-video.md). Load these only when relevant; an existing editor preference or simple footage edit need not become a code project.
 
@@ -25,6 +33,8 @@ For AI edits of existing footage, editing-route selection, cost control, or draf
 For videos users can fine-tune directly, read [references/visual-editing.md](references/visual-editing.md). Deliver a supported visual editing surface with the project: prefer existing native editor controls, or a focused panel connected to a code-rendered composition. Save user adjustments and use that same state for preview and export. A playback/feedback page is not an editing interface.
 
 ## Establish source and context
+
+Consult the [learning index](references/learning-index.md) for relevant retained methods and source studies before related work; load matching records and the active project’s explicit feedback, preserving inspection, implementation and acceptance status.
 
 Use the active project's existing brand brief or project-local `brand-brief.md`, source media, copy, and approved examples. Share that same brief with social-designer when available. Keep audience, intended takeaway, voice, visual/editorial language, references, destination, and production constraints with the project; this skill is brand-agnostic.
 
@@ -38,9 +48,9 @@ Ask only for missing information that materially blocks the requested result. Us
 
 ## Direct and build
 
-1. **Find the story.** Identify the central idea, evidence or examples, emotional movement, and ending. Preserve a speaker's meaning when shortening material; do not splice quotations into a claim they did not make.
+1. **Find the story.** Identify the central idea, evidence or examples, emotional movement, and ending. Open on a clear subject and a real question, and pay it off. Preserve a speaker's meaning when shortening material; do not splice quotations into a claim they did not make.
 2. **Choose the treatment.** Translate references into concrete choices about framing, typography, imagery, color, pacing, transitions, and sound. Explore alternatives when the direction is unresolved; refine an existing direction directly when it is clear.
-3. **Establish a representative moment.** Use actual source content to test the visual language and caption readability. For longer or complex films, build a storyboard or rough sequence before expensive finishing. Continue autonomously where the brief is clear; do not impose a separate approval gate on every edit.
+3. **Establish a representative moment.** Use actual source content to test the visual language and caption readability. For a new video, make a storyboard with `studio.mjs board` or a rough sequence before rendering. Stop at sign-offs only when the user is working on the piece with you; a clear, small edit needs none.
 4. **Assemble for meaning.** Cut around complete thoughts and intentional beats. Choose footage, graphics, animation, and silence for their editorial role. Preserve breathing room where the idea needs it; fast cuts and constant motion are not universal defaults.
 5. **Finish deliberately.** Correct captions, refine timing, mix sound, align visual treatment, and inspect continuity. For animation, define what changes, why it moves, and how long the viewer needs to understand it.
 6. **Revise with control.** Tie feedback to the exact draft version and time/range. State what stays fixed and what changes. Preserve successful timing, content, and visual relationships unless the problem calls for a broader rethink. Reuse unchanged assets/analysis, remap notes after structural cuts, and inspect the affected sequence before verifying the full final assembly.

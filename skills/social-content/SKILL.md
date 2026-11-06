@@ -1,8 +1,8 @@
 ---
 name: social-content
-description: Write social media posts, hooks, captions, scripts, repurposing plans, and editorial calendars using the active project's audience, brand voice, and strategy. Use for everyday social content creation and focused copy variants. Project-level audience research, channel strategy, campaign audits, and strategic performance decisions belong to social-marketer when available; final static visuals and videos belong to the production skills.
+description: Write social media posts, hooks, captions, scripts, repurposing plans, and editorial calendars using the active project's audience, brand voice, and strategy. Use for everyday social content creation, focused copy variants, developing a video script from nothing, or improving an existing script. Project-level audience research, channel strategy, campaign audits, and strategic performance decisions belong to social-marketer when available; final static visuals and videos belong to the production skills.
 metadata:
-  version: 1.4.0
+  version: 1.6.0
 ---
 
 # Social Content
@@ -10,6 +10,8 @@ metadata:
 Turn the active project's direction and source material into useful, distinctive social copy and production briefs. Own the content requested, while keeping research, creative judgment, measured results, and finished media distinguishable.
 
 ## Start from context and the deliverable
+
+Consult the [learning index](references/learning-index.md) for relevant retained methods and source studies before related work; load matching records and the active project’s explicit feedback, preserving inspection, implementation and acceptance status.
 
 Read the existing brand brief, relevant social strategy, source material, approved claims, and explicit feedback before asking questions. Product-marketing context may be in `.agents/product-marketing-context.md` or its older `.claude/` equivalent. Use the same project context as the other creative skills; keep brand identity and outcomes out of generic skill files.
 
@@ -23,7 +25,7 @@ Choose topics and angles from the strategy, audience questions, relevant project
 
 Preserve exact supplied quotations and their context. Verify new attributions before presenting them as fact. Keep commentary and paraphrase distinct from direct quotations. Do not invent personal stories, customer comments, testimonials, timelines, statistics, or results to make a template persuasive. If a requested story lacks its real details, ask for them or label an incomplete structure honestly.
 
-Load [references/post-templates.md](references/post-templates.md) when a format or hook starting point is useful, [references/platforms.md](references/platforms.md) for destination adaptations, and [references/platform-limits.md](references/platform-limits.md) for current delivery verification. Treat examples and formulas as choices to adapt, not evidence of performance or fixed length/cadence rules.
+For the opening of any video or script, read [references/hooks.md](references/hooks.md). To write a script from nothing or improve an existing one, read [references/script-development.md](references/script-development.md): settle the story, offer three angles or openings, run its checks, and hand off an approved `brief.md`. Never promise virality. Load [references/post-templates.md](references/post-templates.md) when a format or hook starting point is useful, [references/platforms.md](references/platforms.md) for destination adaptations, and [references/platform-limits.md](references/platform-limits.md) for current delivery verification. Treat examples and formulas as choices to adapt, not evidence of performance or fixed length/cadence rules.
 
 ## Repurpose and prepare production
 

@@ -19,6 +19,22 @@ Identify what to borrow, why it fits this audience, what to adapt, and what woul
 
 Store a reusable format card in the project's existing reference library when useful: purpose/audience, opening promise, beat progression, resolution, visual/editorial language, sound approach, asset needs, source examples, and unsuitable contexts. Keep observed outcomes distinct from taste and predicted performance.
 
+## Calibrate taste with a comparable result
+
+When the user is teaching a visual preference, connect the reference to a rendered study. Explain the specific observed construction: framing, type relationships, text grouping, holds, overlap, transition geometry, acceleration/deceleration and sound cues. Separate what can be seen/heard from an inferred production method; the finished clip rarely establishes which application or preset its creator used.
+
+Reproduce the defining relationship with the project's own words/assets, then compare the same beat or sequence with the reference. Show what matched, what diverged and why. Keep a short technical exercise clearly distinct from a requested complete reel; finish the latter when the reference and brief permit it. Preserve editable source and practical controls without letting editor construction displace the film.
+
+Record explicit feedback with the actual version and relevant timecodes. A rejected sample is not an accepted brand treatment. Do not infer that the user dislikes an entire font category, palette or pace when they only rejected the whole result. Where the reason is unknown, retain it as unknown and let the next reference comparison narrow it.
+
+## Make an executable pattern template
+
+A format card describes a pattern; a reusable production template also needs its working source/native project, example inputs, retained or replaceable assets/fonts, a rendered example and tested render instructions. Keep it with the project's existing pattern library. Label it experimental, accepted for this context, or superseded; technical success alone does not establish taste acceptance.
+
+Specify editable inputs and the relationships that define the pattern: composition/type rules, text grouping, event times/offsets, hold/reveal/exit behavior, easing, transitions, sound events and ending/loop. Preserve those relationships while substituting content. Try another realistic text length or asset before calling it reusable, and record limits such as overflowing type, unsupported path topology or timing that depends on voice. Reuse a static layout only when it works as a still; a random frozen frame need not make a good quote post.
+
+For implementation study and motion-specific inspection, read [motion graphics](motion-graphics.md). Promote a checked general technique into the owning skill; keep personal taste, individual references and accepted brand defaults in project context. Routine edits need none of this additional ceremony.
+
 ## Convert the treatment into a production plan
 
 For work that needs planning, map actual source material or approved copy to beats:

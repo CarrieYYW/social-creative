@@ -11,13 +11,15 @@ Create readable, distinctive social visuals that serve the message and fit the a
 
 Identify whether the user wants a concept, a finished asset, an edit, a format adaptation, or a review. A request to make a post calls for an actual artifact when tools permit; a design description is not an exported design. For a review, lead with prioritized observations and concrete fixes.
 
-Read [references/static-design.md](references/static-design.md) for quote design, carousel structure, and format adaptation. For a new brand or mixed-brand work, also read [references/brand-context.md](references/brand-context.md).
+Read [references/static-design.md](references/static-design.md) for quote design, carousel structure, and format adaptation. For quote posts, also read [references/quote-design.md](references/quote-design.md); its Studio templates give an editable project with a live preview, and the same project can become a reel. For a new brand or mixed-brand work, also read [references/brand-context.md](references/brand-context.md).
 
 When learning from supplied examples or building reusable formats, read [references/reference-analysis.md](references/reference-analysis.md). Record source and inspection coverage, extract the transferable design relationship, and state what fits the active brand. A routine edit does not need a separate teardown.
 
 For quote-post/carousel mockups or an editable handoff, read [references/editable-mockups.md](references/editable-mockups.md). Prefer the user’s supported editor; otherwise choose a portable format with practical fine-tuning controls. Keep quote and attribution as live text, preserve separate design elements, and verify saved changes reopen correctly.
 
 ## Ground in this brand and message
+
+Consult the [learning index](references/learning-index.md) for relevant retained methods and source studies before related work; load matching records and the active project’s explicit feedback, preserving inspection, implementation and acceptance status.
 
 Use the active project's brand brief, source copy, existing assets, and explicit user feedback. A brief may live in an existing brand doc or a project-local `brand-brief.md`; use that same file when collaborating with video-editor. Keep audience, message, desired response, voice, visual identity, examples, and delivery requirements with the project. Do not bake a particular brand into this skill or transfer another brand's preferences silently.
 
@@ -32,6 +34,8 @@ Preserve exact supplied quotations. Verify new attributions before presenting th
 - Establish a representative post or a cover plus content slide before extending a set. Use actual copy so line breaks, image choice, and pacing can be judged.
 - Make imagery carry meaning: context, metaphor, evidence, atmosphere, or focus. Use typography alone when that communicates better. Generate imagery when it helps the brief; do not add imagery merely to fill space.
 - Once a direction is chosen, state what stays fixed and what each revision changes. Preserve successful work while responding to the actual feedback.
+
+For image discovery, reference-informed image directions, or AI-generated backgrounds, read [references/image-sourcing.md](references/image-sourcing.md). It includes the quote editor’s assisted request/library handoff. Return actual inspected images with provenance, keep essential words editable, and distinguish a saved brief from a completed generation.
 
 ## Produce and adapt
 

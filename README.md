@@ -14,7 +14,19 @@ The specialists reuse the active project's existing brand guide or project-local
 
 Social-marketer researches a new project's foundation and refreshes it for meaningful decisions. Social-content translates the direction into copy and a practical editorial plan; the production skills own their finished deliverables. Simple requests proceed directly from a clear brief without a four-role pipeline. Product UI design is outside this plugin's scope.
 
-## Version 1.5.0
+## Version 1.6.0 — editable templates and creative learning
+
+**[Studio](skills/video-editor/assets/studio/README.md)** adds editable templates for quote, motion explainer, talking-head and event-promo videos. One `project.json` drives a live browser preview, stills and video, so edits made in the browser and from chat land in the same file. It runs on Node 22+, Chrome and ffmpeg with no packages to install. All templates are experimental: rendered and tested, not yet accepted or measured. Footage templates have only been tested with placeholder media.
+
+**[Story and hooks](skills/video-editor/references/story-and-hooks.md)** puts story first, with a hook structure for any video, structures by video type and an [evidence record](skills/video-editor/references/story-research-2026-11-05.md) that lists the popular claims that failed verification. [Motion craft](skills/video-editor/references/motion-craft.md) and [quote design](skills/social-designer/references/quote-design.md) add working typography, timing and transition guidance.
+
+**[Production workflow](skills/video-editor/references/production-workflow.md)** takes a new video through a story brief, script, storyboard, low-res draft and final, with a sign-off at each stage that asks only what that stage can show. Small edits skip the stages. [Script development](skills/social-content/references/script-development.md) writes a script from nothing or improves an existing one, and `studio.mjs board` makes a storyboard sheet and beat list. Studio steps have been run on sample projects; the whole workflow has not yet been run on a real project.
+
+**[Quote Studio](skills/social-designer/assets/quote-studio/README.md)** adds a focused 4:5 quote editor with live typography, optional texture, image/crop controls, undo, saved project JSON, editable SVG and matching PNG exports. Its [image sourcing workflow](skills/social-designer/references/image-sourcing.md) offers reference-informed directions, stock search and an explicit assistant-in-chat generation handoff. Returned images enter a local project library; the editor starts no unattended model calls or paid API integration. Client images and exports stay outside plugin/skill source.
+
+The [learning library](LEARNINGS.md) indexes source studies, reusable patterns and evidence limits. Release review also covers timing, adjacent transitions, variant media, saved-edit recovery and local file boundaries; see [release validation](RELEASE_REVIEW.md).
+
+## Included from version 1.5.0
 
 Adds a [direct visual video editing workflow](skills/video-editor/references/visual-editing.md): use an existing editor or a focused composition panel so users can fine-tune captions, layout, media, timing, motion, and audio as supported by the project. Saved adjustments must drive both preview and export, with undo/recovery, scene/global scope, and persistence checks. The included playback/feedback helper remains review-only. This release adds maintained production instructions, not a bundled editing engine or a tested universal video editor.
 
@@ -32,8 +44,12 @@ Inspect actual evidence, extract a transferable pattern, adapt it to the project
 - [Content reference analysis and format cards](skills/social-content/references/reverse-engineering.md)
 - [Focused creative testing and learning](skills/social-content/references/creative-testing.md)
 - [Editable quote and carousel mockups](skills/social-designer/references/editable-mockups.md)
+- [Eight-account quote/type/material study](skills/social-designer/references/quote-style-study-2026-11-05.md) and [experimental quote studio](skills/social-designer/assets/quote-studio/README.md)
 - [Static reference analysis and variants](skills/social-designer/references/reference-analysis.md)
 - [Video teardowns, beat plans, and shot coverage](skills/video-editor/references/reference-analysis.md)
+- [Motion-graphics studies and working pattern templates](skills/video-editor/references/motion-graphics.md)
+- [Bryan Hynes: filming, edit coverage and text roles](skills/video-editor/references/bryan-hynes-study-2026-11-05.md)
+- [Studio Znaak methods study](skills/video-editor/references/studio-znaak-study-2026-11-05.md) and the experimental [cross-grid template](skills/video-editor/assets/cross-grid/README.md)
 - [Direct visual video editing](skills/video-editor/references/visual-editing.md)
 - [Affordable, reviewable AI editing](skills/video-editor/references/reviewable-editing.md)
 - [Code-based video production](skills/video-editor/references/code-based-video.md)
@@ -63,6 +79,24 @@ claude plugin install social-creative@social-creative --scope user
 
 User scope makes the plugin available across projects on that machine. Start a new Claude Code session, or run `/reload-plugins` in an existing one. See the [official installation documentation](https://code.claude.com/docs/en/discover-plugins).
 
+### Update an existing installation
+
+For Codex, refresh this marketplace and install its latest snapshot:
+
+```sh
+codex plugin marketplace upgrade social-creative
+codex plugin add social-creative@social-creative
+```
+
+For a user-scoped Claude Code installation:
+
+```sh
+claude plugin marketplace update social-creative
+claude plugin update social-creative@social-creative --scope user
+```
+
+Restart Codex; start a new Claude Code session or use `/reload-plugins`. Existing conversations can retain skill instructions loaded earlier. User-scoped installations apply across projects on this machine; separately uploaded skill ZIPs need replacing too. Existing project files are not automatically migrated or restyled by a plugin update.
+
 ### Migrate from aya-plugins
 
 Install and verify `social-creative@social-creative` first. If you previously installed `social-creative@aya-plugins`, remove only that old plugin to avoid loading both copies. Keep the aya-plugins marketplace if you use its other plugins.
@@ -87,7 +121,7 @@ After installation, ask: **“Help me set up Social Creative for my brand and ma
 
 The guide reuses existing project context, asks only consequential missing questions, checks usable tools, and helps make a first asset. New users do not need to choose among specialist roles. A focused request with sufficient context goes directly to production. Your brand and feedback stay in your project; another installation starts with its own context.
 
-For video, the AI can edit through supported integrations or reproducible scripts when those tools are available. It should supply a playable draft plus editable source or a reproduction recipe, then apply your feedback to that version. It checks existing tools/entitlements and relevant costs before substantial metered work. The plugin includes no editing engine, subscriptions, credentials, or automatically connected accounts.
+For video, the AI can edit through supported integrations or reproducible scripts when those tools are available. It should supply a playable draft plus editable source or a reproduction recipe, then apply your feedback to that version. It checks existing tools/entitlements and relevant costs before substantial metered work. The plugin includes the Studio template renderer but no general timeline editor, subscriptions, credentials, or automatically connected accounts.
 
 ### Review a video locally
 
@@ -102,15 +136,21 @@ Invoke the skill that owns the requested decision or deliverable and provide the
 From a checkout of this repository:
 
 ```sh
+python3 scripts/sync_studio.py
 python3 scripts/check_plugin.py
 python3 scripts/pack_skills.py
 python3 scripts/test_review.py
 node --test scripts/test_review_ui.js
+node --test skills/video-editor/assets/studio/test/*.test.mjs
+node --test skills/social-designer/assets/quote-studio/*.test.cjs
+(cd skills/social-designer/assets/quote-studio && python3 -m unittest image_store_test.py)
 ```
 
 The packer writes one standalone skill ZIP per skill under `dist/` for surfaces that accept skill uploads. Those uploads are separate installed copies and need to be replaced when updating. Package checks do not establish marketing or media quality.
 
 ## Research and retained learnings
+
+Start with the [learning library](LEARNINGS.md): a topic/source catalogue, working-pattern index, evidence status and retrieval instructions. Each production/content/research skill includes a local learning index so standalone packages remain discoverable. Detailed notes keep their existing owners; private brand taste and feedback stay with the active project.
 
 [Creative research and learnings](skills/social-content/references/creative-research.md) synthesizes source findings, evidence limits, rejected approaches, pending references, and their integration status. [Social marketing learnings](skills/social-content/references/social-marketing-research.md) retains audience, offer, distribution, and measurement lessons with applicability and evaluation limits. These notebooks live in social-content's references for packaging; the working methods live with their owning skills, without requiring other skill folders in a standalone package.
 

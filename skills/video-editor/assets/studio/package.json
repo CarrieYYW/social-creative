@@ -1,0 +1,8 @@
+{
+  "name": "social-creative-studio",
+  "private": true,
+  "type": "module",
+  "description": "Zero-dependency editable post and reel templates: one project.json drives preview, stills and video.",
+  "engines": { "node": ">=22" },
+  "scripts": { "test": "node --test test/*.test.mjs" }
+}

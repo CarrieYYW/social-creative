@@ -42,6 +42,20 @@
         "Does not force social post formats onto email work"
       ],
       "files": []
+    },
+    {
+      "id": 7,
+      "prompt": "Here's my reel script, can you make it more viral? 'Hi everyone, welcome back. Today I want to talk about why morning routines matter. I've been doing mine for a while and it really helped me. Let me know what you think in the comments!'",
+      "expected_output": "Improve the script while keeping the writer's voice and meaning. Name what works, the main problems with the affected lines, a revised script with visible changes, and three openings using different hook types. Ask for the real details the script lacks rather than inventing a routine or results, and give no virality score or promise.",
+      "assertions": [
+        "Does not promise virality or give a predicted score",
+        "Removes the greeting and opens on a clear subject and a real question",
+        "Does not invent personal details, routines, numbers or results",
+        "Asks for or marks the specific facts only the writer has",
+        "Shows what changed rather than silently rewriting",
+        "Offers three openings using different hook types"
+      ],
+      "files": []
     }
   ]
 }

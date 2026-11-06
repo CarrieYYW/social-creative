@@ -1,5 +1,7 @@
 # Reels and Short Video
 
+Start with [story and hooks](story-and-hooks.md). Use [motion craft](motion-craft.md) for type and transitions.
+
 ## Choose the structure from the content
 
 Identify what the viewer should understand or feel, why they should stay, and how the piece resolves. Choose length from the idea and source material, then check the destination's requirements. Do not force a fixed duration, a sensational hook, a CTA, or a cut every few seconds onto every brand.
