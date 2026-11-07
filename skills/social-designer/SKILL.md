@@ -35,7 +35,7 @@ Preserve exact supplied quotations. Verify new attributions before presenting th
 - Make imagery carry meaning: context, metaphor, evidence, atmosphere, or focus. Use typography alone when that communicates better. Generate imagery when it helps the brief; do not add imagery merely to fill space.
 - Once a direction is chosen, state what stays fixed and what each revision changes. Preserve successful work while responding to the actual feedback.
 
-For image discovery, reference-informed image directions, or AI-generated backgrounds, read [references/image-sourcing.md](references/image-sourcing.md). It includes the quote editor’s assisted request/library handoff. Return actual inspected images with provenance, keep essential words editable, and distinguish a saved brief from a completed generation.
+For image discovery, reference-informed image directions, or AI-generated backgrounds, read [references/image-sourcing.md](references/image-sourcing.md). It includes the quote editor’s direct stock search/import and explicit assistant request/library handoff for curation or generation. Return actual inspected images with provenance, keep essential words editable, and distinguish a saved brief from a completed generation.
 
 ## Produce and adapt
 

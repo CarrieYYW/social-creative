@@ -5,6 +5,7 @@ from pathlib import Path
 import json, mimetypes, secrets, uuid, base64, argparse, re
 from urllib.parse import urlsplit, parse_qs
 import image_store
+import stock_images
 from quote_paths import validate_output
 ROOT=Path(__file__).resolve().parent
 class Handler(BaseHTTPRequestHandler):
@@ -28,7 +29,7 @@ class Handler(BaseHTTPRequestHandler):
    return self.send(200,file.read_bytes(),mimetypes.guess_type(file)[0])
   if name in ('/','/index.html'):
    return self.send(200,(ROOT/'index.html').read_text().replace('__QUOTE_KEY__',self.server.key),'text/html; charset=utf-8')
-  allowed=name in ['/app.js','/core.js','/style.css','/image-styles.js','/image-panel.js'] or (name.startswith('/fonts/') and Path(name).name in [x.name for x in (ROOT/'fonts').iterdir()]) or bool(re.fullmatch(r'/exports/[a-f0-9-]{36}\.(json|svg|png)',name))
+  allowed=name in ['/app.js','/core.js','/style.css','/image-styles.js','/image-panel.js','/workspace.js','/stock-panel.js'] or (name.startswith('/fonts/') and Path(name).name in [x.name for x in (ROOT/'fonts').iterdir()]) or bool(re.fullmatch(r'/exports/[a-f0-9-]{36}\.(json|svg|png)',name))
   export=name.startswith('/exports/')
   base=self.server.output if export else ROOT
   file=(base/Path(name).name).resolve() if export else (ROOT/name.lstrip('/')).resolve()
@@ -36,12 +37,14 @@ class Handler(BaseHTTPRequestHandler):
   self.send(200,file.read_bytes(),mimetypes.guess_type(file)[0] or 'application/octet-stream')
  def do_POST(self):
   if not self.valid_host():return self.send(403,{'error':'Host rejected. Use the loopback editor URL.'})
-  if self.path not in ('/api/save','/api/image-request','/api/image-cancel') or self.headers.get('X-Quote-Key')!=self.server.key or not self.headers.get('Content-Type','').startswith('application/json'):return self.send(403,{'error':'Use the local editor controls.'})
+  if self.path not in ('/api/save','/api/image-request','/api/image-cancel','/api/stock-search','/api/stock-import') or self.headers.get('X-Quote-Key')!=self.server.key or not self.headers.get('Content-Type','').startswith('application/json'):return self.send(403,{'error':'Use the local editor controls.'})
   if self.headers.get('Origin') not in (None,f'http://127.0.0.1:{self.server.server_port}'):return self.send(403,{'error':'Origin rejected.'})
   try:
    length=int(self.headers.get('Content-Length',0))
    if length<=0 or length>18*1024*1024:raise ValueError('Project is too large.')
    value=json.loads(self.rfile.read(length))
+   if self.path=='/api/stock-search':return self.send(200,stock_images.search(value))
+   if self.path=='/api/stock-import':return self.send(200,stock_images.import_image(self.server.output,value))
    if self.path=='/api/image-request':return self.send(200,image_store.create(self.server.output,value))
    if self.path=='/api/image-cancel':
     if not isinstance(value,dict) or set(value)!={'project','id'}:raise ValueError('Invalid cancellation.')

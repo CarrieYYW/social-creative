@@ -34,7 +34,7 @@ Provide a concrete save/reopen mechanism: a saved self-contained document or a c
 
 Only show an image-export control if it really produces the design at the intended size. Check fonts, images, clipping, and controls exclusion in the actual export; browser display alone does not prove export fidelity. If export requires an agent-operated renderer, provide the editable mockup and preview, explain that path plainly, and state what has and has not been rendered. Do not build a general design application for a single post.
 
-For stock discovery or AI backgrounds, use [image sourcing](image-sourcing.md): inspect the actual image, retain provenance, plan the text-bearing crop and keep the essential quote separate. In Quote Studio, requests are processed explicitly by the assistant in chat; returned assets enter the project library for review and undoable application.
+For stock discovery or AI backgrounds, use [image sourcing](image-sourcing.md): inspect the actual image, retain provenance, plan the text-bearing crop and keep the essential quote separate. In Quote Studio, use **Image → Find stock** to search and apply a photo directly. AI generation and curated searches use the explicit assistant-in-chat handoff. Imported and returned assets enter the project library for review and undoable application.
 
 ## Verify and deliver
 

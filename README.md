@@ -143,7 +143,7 @@ python3 scripts/test_review.py
 node --test scripts/test_review_ui.js
 node --test skills/video-editor/assets/studio/test/*.test.mjs
 node --test skills/social-designer/assets/quote-studio/*.test.cjs
-(cd skills/social-designer/assets/quote-studio && python3 -m unittest image_store_test.py)
+(cd skills/social-designer/assets/quote-studio && python3 -m unittest discover -p '*test.py')
 ```
 
 The packer writes one standalone skill ZIP per skill under `dist/` for surfaces that accept skill uploads. Those uploads are separate installed copies and need to be replaced when updating. Package checks do not establish marketing or media quality.
