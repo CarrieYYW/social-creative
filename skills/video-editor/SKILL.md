@@ -1,6 +1,6 @@
 ---
 name: video-editor
-description: Create, edit, or review videos, including reels, animated quotes, visual explainers, talking-head edits with B-roll, and audio-to-video or long-form projects. Own visual direction, story structure, pacing, captions, sound, animation, and verified exports. Also use for video production pipelines, direct visual fine-tuning, and timecoded edit feedback. Static posts and carousels belong to social-designer when available.
+description: Create, edit, or review videos, including reels, animated quotes, visual explainers, talking-head edits with B-roll, audio-to-video and long-form projects, and shorts drawn from recordings or batches of clips. Own visual direction, story structure, pacing, captions, sound, animation, and verified exports. Also use for video production pipelines, direct visual fine-tuning, and timecoded edit feedback. Static posts and carousels belong to social-designer when available.
 ---
 
 # Video Editor
@@ -14,13 +14,17 @@ Turn the intended message and source material into a coherent viewing experience
 - **Creative direction:** propose a treatment, reference frames, or storyboard when that is the requested deliverable. Distinguish a concept from a rendered film.
 - **Pipeline design:** define source ingestion, beat selection, sourcing/generation, assembly, captions, sound, export, and review as needed. Explain the editable source and repeatable controls; do not build an application when the user asked for an edit.
 
+For a recording or clip collection that needs to become one or more shorts, follow [Source to shorts](references/source-to-shorts.md). It covers excerpt-only requests, source coverage, candidate selection, assembly and per-short review. For a cut assembled from one recording with verified source-timed captions, the [speech-short renderer](references/speech-shorts.md) can join selected passages, retain their audio and export retimed captions. For an insert, demo, or product animation, follow [Product and B-roll direction](references/product-and-b-roll.md) to decide what can be shown faithfully with the available material.
+
 Story comes first. For any new video, read [references/story-and-hooks.md](references/story-and-hooks.md) and settle the audience, promise, payoff and share reason before choosing a treatment. Never promise virality.
 
 For any new video, follow [references/production-workflow.md](references/production-workflow.md): story brief, script, storyboard, low-res draft, final, learn, with a sign-off that asks only what each stage can show. It also sizes the job, so small edits skip the stages.
 
-Studio is the default editable route when no native editor is preferred: templates for quote, explainer, talking-head and event-promo videos, where one `project.json` drives the live preview, stills and video. Read [references/studio-system.md](references/studio-system.md). For type, timing, curves and transition choices, read [references/motion-craft.md](references/motion-craft.md).
+For supported template edits, use Studio when no native editor is preferred. For source footage, [map the edit into Studio](references/footage-in-studio.md), including source versus edited timing. Studio has templates for quote, explainer, talking-head and event-promo videos, where one `project.json` drives the live preview, stills and video. Read [references/studio-system.md](references/studio-system.md). For type, timing, curves and transition choices, read [references/motion-craft.md](references/motion-craft.md).
 
 For reels, animated quotes, explainers, and talking-head edits, read [references/short-form.md](references/short-form.md). For platform-ready delivery, read [references/platform-specs.md](references/platform-specs.md). Load [references/audio-design.md](references/audio-design.md) when working on sound and [references/ai-video-tools.md](references/ai-video-tools.md) when generating footage.
+
+For a substantial new treatment, test the hardest passage with actual copy, assets and sound before repeating the design across the edit. Use the [craft review](references/craft-review.md) to judge the first export and bind repairs to the affected version.
 
 For reference teardowns, repeatable treatments, or substantial beat/shot planning, read [references/reference-analysis.md](references/reference-analysis.md). State inspection coverage, connect timecoded observations to editorial purpose, and adapt the pattern to this brand. Simple edits do not require a separate analysis or shot list.
 

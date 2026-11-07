@@ -14,6 +14,12 @@ The specialists reuse the active project's existing brand guide or project-local
 
 Social-marketer researches a new project's foundation and refreshes it for meaningful decisions. Social-content translates the direction into copy and a practical editorial plan; the production skills own their finished deliverables. Simple requests proceed directly from a clear brief without a four-role pipeline. Product UI design is outside this plugin's scope.
 
+## Version 1.7.0 — footage to shorts
+
+Ask Social Creative to turn a recording or folder of clips into distinct shorts. For example, “Turn this interview into two vertical shorts for first-time buyers. Keep the speaker’s qualifications, caption both cuts, and give me the editable projects.” The [video editor](skills/video-editor/SKILL.md) tracks which parts of the sources it reviewed, chooses moments that stand on their own, and checks each export. A transcript by itself supports a paper edit. A verified source-timed transcript plus media can support a rendered cut.
+
+Use the [footage workflow](skills/video-editor/references/source-to-shorts.md) for selection and delivery, [product and B-roll direction](skills/video-editor/references/product-and-b-roll.md) for inserts, and [craft review](skills/video-editor/references/craft-review.md) for versioned revisions. For a speaking clip with checked source-timed SRT, the [speech-cut helper](skills/video-editor/references/speech-shorts.md) creates a captioned MP4, retimed SRT and editable source bundle using Python, Pillow, FFmpeg/FFprobe and Fontconfig. For an editable talking-head template, [map the decisions into Studio](skills/video-editor/references/footage-in-studio.md).
+
 ## Version 1.6.0 — editable templates and creative learning
 
 **[Studio](skills/video-editor/assets/studio/README.md)** adds editable templates for quote, motion explainer, talking-head and event-promo videos. One `project.json` drives a live browser preview, stills and video, so edits made in the browser and from chat land in the same file. It runs on Node 22+, Chrome and ffmpeg with no packages to install. All templates are experimental: rendered and tested, not yet accepted or measured. Footage templates have only been tested with placeholder media.
@@ -140,6 +146,7 @@ python3 scripts/sync_studio.py
 python3 scripts/check_plugin.py
 python3 scripts/pack_skills.py
 python3 scripts/test_review.py
+python3 scripts/test_speech_short.py  # Requires the speech-cut dependencies above.
 node --test scripts/test_review_ui.js
 node --test skills/video-editor/assets/studio/test/*.test.mjs
 node --test skills/social-designer/assets/quote-studio/*.test.cjs

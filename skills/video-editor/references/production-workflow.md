@@ -14,6 +14,8 @@ Status: proposed 2026-11-05. Studio's steps have been run on sample projects; th
 | A new video | All stages. |
 | "Just make it" | Run every stage without pausing, state your assumptions, and show the draft. |
 
+When a new short comes from recordings or a folder of clips, use [source to shorts](source-to-shorts.md) during the brief and script stages. Check each candidate against the surrounding material before choosing a hook. Use the selected passages, with their source IDs and times, to build the board and draft. Run the [craft review](craft-review.md) on each final cut.
+
 Wait at a sign-off only when the user is working on the piece with you. Do not add a sign-off to a clear, small edit.
 
 ## Stages

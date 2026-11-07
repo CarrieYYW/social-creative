@@ -1,4 +1,4 @@
 interface:
   display_name: "Video Editor"
-  short_description: "Create and edit reels, explainers, quotes, and longer videos"
+  short_description: "Edit reels and explainers, or turn footage into distinct shorts"
   default_prompt: "Use $video-editor to produce or refine this video using the active brand brief and source media."

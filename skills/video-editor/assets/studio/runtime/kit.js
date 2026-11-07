@@ -22,11 +22,12 @@ export function timelineFromEdits(edits) {
 export function remapWords(words, edits) {
   const segs = timelineFromEdits(edits);
   const out = [];
-  for (const w of words) {
-    const mid = (w.s + w.e) / 2;
-    const seg = segs.find((s) => mid >= s.in && mid < s.out);
-    if (!seg) continue;
-    out.push({ ...w, s: Math.max(seg.at, seg.at + w.s - seg.in), e: Math.min(seg.at + seg.duration, seg.at + w.e - seg.in) });
+  for (const seg of segs) {
+    for (const w of words) {
+      const mid = (w.s + w.e) / 2;
+      if (mid < seg.in || mid >= seg.out) continue;
+      out.push({ ...w, s: Math.max(seg.at, seg.at + w.s - seg.in), e: Math.min(seg.at + seg.duration, seg.at + w.e - seg.in) });
+    }
   }
   return out;
 }

@@ -57,4 +57,8 @@ Keep the writer's voice and meaning. Change what needs changing and leave what a
 
 ## Hand off
 
+For video, pair each spoken line with what the viewer sees. Mark exact source excerpts with the recording and its time range. Label any new voiceover or editorial title separately. In a product demo, identify the actual action or result the line refers to and allow time to see it.
+
+Budget the full running time. A 30-second script with six seconds reserved for a silent demonstration has 24 seconds available for speech. A demonstration under narration uses the same seconds as the line. Time a scratch read at the intended pace, including pauses, and record the measured duration and any separate visual holds in the brief. If a read is unavailable, label the timing as estimated. When a beat overruns, cut or split the thought and time it again.
+
 Once approved, put the script and story fields in `brief.md` and set its stage to `storyboard`. For a video, video-editor takes it from there. Write a beat list only if asked; the production skill owns the storyboard and final timing.

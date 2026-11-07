@@ -78,6 +78,16 @@ test('captions follow the edit: dropped takes vanish, later words shift', () => 
   assert.ok(Math.abs(out[1].s - 0.7) < 1e-9);
 });
 
+test('captions follow a later hook when it is replayed in the body of the short', () => {
+  const words = [{ w: 'setup', s: 0.25, e: 0.5 }, { w: 'result', s: 4.25, e: 4.75 }];
+  const edits = [{ in: 4, out: 5 }, { in: 0, out: 1 }, { in: 4, out: 5 }];
+  assert.deepEqual(remapWords(words, edits), [
+    { w: 'result', s: 0.25, e: 0.75 },
+    { w: 'setup', s: 1.25, e: 1.5 },
+    { w: 'result', s: 2.25, e: 2.75 },
+  ]);
+});
+
 test('montage roles set shot length and an override wins', () => {
   const plan = montagePlan([{ role: 'establish' }, { role: 'peak' }, { role: 'peak', beats: 2 }], 120);
   assert.deepEqual(plan.map((c) => c.seconds), [2, 0.5, 1]);

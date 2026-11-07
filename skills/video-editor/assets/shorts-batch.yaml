@@ -1,0 +1,84 @@
+# Proposed planning metadata, not a renderer contract. Null = unresolved.
+# Use a separate editable project for each short.
+batch_version: "1.0"
+batch_id: null
+status: draft
+request:
+  audience: null
+  objective: null
+  input_mode: null # long_form, clip_batch, mixed, transcript_only
+  output_count: null
+  duration_range_seconds: null
+  platforms: []
+  style_brief: null
+  mandatory_content: []
+  exclusions: []
+sources:
+  - asset_id: source-01
+    path: null
+    duration_ms: null
+    reported_duration_ms: null # Supplied duration, separate from probed duration_ms.
+    media_time_origin_ms: null
+    fps: {num: null, den: null}
+    dimensions: {width: null, height: null}
+    audio_tracks: []
+    color_metadata: null
+    transcript_path: null
+    proxy_path: null
+    proxy_time_mapping: null
+    usage_scope: null
+    reviewed_intervals: [] # start_ms, end_ms, modalities, notes; all source-local
+    unreviewed_intervals: []
+    topics_or_actions: []
+    quality_issues: []
+transcript_excerpts: # Optional; use for supplied text without verified media ranges.
+  - excerpt_id: excerpt-01
+    asset_id: source-01
+    speaker: null
+    exact_text: null
+    supplied_anchor:
+      value: null # Preserve the original value, e.g. "03:10".
+      unit: null # mm:ss, hh:mm:ss, seconds, milliseconds, frame_timecode
+      timebase: null # Record source origin/FPS if known; never infer them.
+      state: supplied_unverified
+    provenance:
+      source: null # Supplied excerpt, transcript file, URL, or other known origin.
+      original_scope: null # full_transcript, partial_transcript, excerpt_only
+      reviewed_scope: null # State what text/context was actually inspected.
+    verified_source_range: {in_ms: null, out_ms: null}
+    caption_alignment: {state: unaligned, word_times: null, output_cues: null}
+candidates:
+  - candidate_id: candidate-01
+    topic: null
+    actual_excerpt: null
+    proposed_editorial_hook: null
+    context: null
+    payoff: null
+    excerpt_ids: [] # Refer to supplied text without treating anchors as edit ranges.
+    source_ranges: [] # asset_id, in_ms, out_ms; confirmed source times only
+    context_check: {state: unverified, evidence: [], qualifications: []}
+    visual_audio_check: {state: unverified, notes: []}
+    proposed_duration_seconds: null
+    production_needs: []
+    selection_reason: null
+    distinct_from: []
+    decision: unselected
+outputs:
+  - short_id: short-01
+    story_id: null
+    variant_id: null
+    candidate_ids: []
+    title: null
+    style_spec: null
+    edit_plan_path: null
+    source_output_map: [] # asset_id, source in/out ms, output start/end frames, FPS/rate
+    enhancement_assets: [] # B-roll/graphics/animation: purpose, route, state, path, usage
+    caption_path: null
+    editable_project_path: null
+    actual_export_path: null
+    actual_duration_seconds: null
+    destination: null
+    state: planned
+    qa: {state: unverified, evidence: [], unresolved: []}
+blocking_issues:
+  - Unfilled template; inventory and inspect sources before selecting measured ranges.

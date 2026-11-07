@@ -1,0 +1,22 @@
+{
+  "schema_version": "speech-short-1.0",
+  "title": "Replace with the selected story",
+  "source": {
+    "path": "recording.mp4",
+    "provenance": "Replace with actual source origin and authorized usage scope",
+    "audio_track": 0
+  },
+  "canvas": {"width": 1080, "height": 1920},
+  "fps": {"num": 30, "den": 1},
+  "segments": [
+    {"id": "context", "source_in_seconds": 12, "duration_frames": 180, "crop": [0, 0, 1, 1]},
+    {"id": "payoff", "source_in_seconds": 31, "duration_frames": 240, "crop": [0, 0, 1, 1]}
+  ],
+  "captions": {
+    "path": "recording.srt",
+    "font_path": "fonts/SpaceGrotesk-Regular.ttf",
+    "font_license_path": "fonts/SpaceGrotesk-LICENSE.txt",
+    "box": [0.08, 0.69, 0.84, 0.19],
+    "size_px": 52
+  }
+}

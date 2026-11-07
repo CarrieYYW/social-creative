@@ -5,6 +5,8 @@ Use this to retrieve a few relevant records before related work. Read the active
 | Need / search terms | Retrieve | Status to preserve |
 |---|---|---|
 | Stages from idea to final; sign-offs; storyboard; versions; keeping cost down | [Production workflow](production-workflow.md) | Proposed. Studio steps run on samples; not yet run on a real project. Token use not measured. |
+| Repurpose a recording or mixed footage into distinct shorts; trace cuts to sources | [Source to shorts](source-to-shorts.md), [batch worksheet](../assets/shorts-batch.yaml) | Editorial workflow. Keep per-output review and delivery status. |
+| Inserts, product animation and substantial design revisions | [Product and B-roll](product-and-b-roll.md), [craft review](craft-review.md) | Check evidence in the final export; keep feedback bound to its version. |
 | Hooks, story structure, why people share; structure by video type | [Story and hooks](story-and-hooks.md), [evidence](story-research-2026-11-05.md) | Desk research. Peer-reviewed work on sharing; opening studies are weak preprints; no tests on our accounts. |
 | Type in motion, timing, curves, transition meaning | [Motion craft](motion-craft.md) | Sources plus working defaults. Taste acceptance pending. |
 | Editable templates: quote, explainer, talking head, event promo | [Studio](studio-system.md), [kit](../assets/studio/README.md) | Experimental. Text templates rendered with sample copy; footage templates tested with placeholders only. |

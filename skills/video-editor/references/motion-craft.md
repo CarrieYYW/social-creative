@@ -40,6 +40,10 @@ Prefer designed curves over a default ease. A fast start puts words in readable 
 
 **Rest state:** every animation must resolve to a composition that works as a still. If a frozen hold looks unfinished, the layout is the problem, not the motion.
 
+For a custom move, give the editor an element name, its job, layer or parent, pivot, property values and units. Specify the curve the editor supports, any mask or sound cue, and when the element settles, holds and exits. State whether times are measured from the scene or the start of the film. If a transition overlaps the next scene, count that time once.
+
+For example, a title in a three-second scene at 30 fps uses local frames 0 through 89. Move it from 24 px below its final baseline to the baseline over frames 0–9 with `out-expo`. Hold frames 10–77, then fade from full opacity to zero over frames 78–89. Allow enough time to read the last line once its stagger has settled. Inspect the title with the actual copy and crop, then play through the cut to catch a clipped glyph, a late cue or a one-frame flash. Keep this specification with the editable scene and use the template's supported controls when building it.
+
 ## Curves
 
 | Name | Use for |
